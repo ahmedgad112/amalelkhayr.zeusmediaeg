@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://amalelkhayr.zeusmediaeg.com/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://amalelkhayr.zeusmediaeg.com/" />
+    <image:image>
+      <image:loc>https://amalelkhayr.zeusmediaeg.com/images/hero-truck.jpg</image:loc>
+      <image:title>سيارة نقل أثاث أمال الخير في الرياض</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amalelkhayr.zeusmediaeg.com/images/service-packing.jpg</image:loc>
+      <image:title>تغليف أثاث احترافي</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amalelkhayr.zeusmediaeg.com/images/service-loading.jpg</image:loc>
+      <image:title>تحميل ونقل أثاث</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amalelkhayr.zeusmediaeg.com/images/service-care.jpg</image:loc>
+      <image:title>صناديق نقل محمية</image:title>
+    </image:image>
+  </url>
+</urlset>
