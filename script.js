@@ -6,9 +6,36 @@
   const form = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
 
+  const trackEvent = (eventName, params = {}) => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", eventName, params);
+  };
+
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+
+    if (href.includes("wa.me") || href.includes("whatsapp")) {
+      trackEvent("whatsapp_click", {
+        event_category: "contact",
+        event_label: href,
+      });
+      return;
+    }
+
+    if (href.startsWith("tel:")) {
+      trackEvent("phone_click", {
+        event_category: "contact",
+        event_label: href,
+      });
+    }
+  });
 
   const onScroll = () => {
     if (!header) return;
@@ -74,6 +101,17 @@
     ].join("\n");
 
     const url = `https://wa.me/966508434496?text=${encodeURIComponent(text)}`;
+
+    trackEvent("generate_lead", {
+      event_category: "contact",
+      event_label: "contact_form_whatsapp",
+      method: "whatsapp_form",
+    });
+    trackEvent("whatsapp_click", {
+      event_category: "contact",
+      event_label: "contact_form",
+    });
+
     window.open(url, "_blank", "noopener,noreferrer");
 
     if (formNote) {
